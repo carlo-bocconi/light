@@ -7,7 +7,7 @@ if($method == 'POST'){
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 
-	$text = $json->result->parameters->text;
+	$text = $json->result->parameters->Gradi;
 
 	switch ($text) {
 		case 'hi':
@@ -15,11 +15,7 @@ if($method == 'POST'){
 			break;
 
 		case 'bye':
-			$speech = "Bye, good night";
-			break;
-
-		case 'anything':
-			$speech = "Yes, you can type anything here.";
+			$speech = "Bye";
 			break;
 		
 		default:
